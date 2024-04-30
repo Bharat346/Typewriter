@@ -1,11 +1,11 @@
 // User Variables 
 let parameters = { speed: 50, delay: 1000, FONTSIZE: 25 };
-const type = document.getElementById("text");
 let str = "";
 let j = 0;
 
 class TypeWriter {
-    constructor(arr,param = parameters){
+    constructor(id,arr,param = parameters){
+        this.type = document.getElementById(id);
         this.keys = arr;
         this.param = param;
         this.styleElement = document.createElement('style');
@@ -55,7 +55,7 @@ class TypeWriter {
             for (let i = 0; i < a.length; i++) {
                 setTimeout(() => {
                     str += a[i];
-                    type.innerText = str;
+                    this.type.innerText = str;
                     if (i === a.length - 1) {
                         resolve();
                     }
@@ -68,7 +68,7 @@ class TypeWriter {
             for (let i = str.length; i >= 0; i--) {
                 setTimeout(() => {
                     str = str.slice(0, -1);
-                    type.innerText = str;
+                    this.type.innerText = str;
                     if (i === 0) {
                         resolve();
                     }
