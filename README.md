@@ -9,7 +9,7 @@ This is made Using javaScript Classes.
    Add the following script tag to your HTML file to include the Typewriter.js library:
    
    ```html
-   <script src="https://cdn.jsdelivr.net/gh/Bharat346/Typewriter/typewriter.js"></script>
+   <script src="https://cdn.jsdelivr.net/gh/Bharat346/Typewriter/TypeWriter.js"></script>
 
 
 2. in second script tag you can craete a new Object of TypeWriter with the input .
